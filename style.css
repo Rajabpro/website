@@ -2976,5 +2976,777 @@ button {
         letter-spacing: 0.5em;
 
     }
+/* ==========================================================
+   MOBILE RESPONSIVE FIX
+   Add this at the VERY BOTTOM of style.css
+   ========================================================== */
 
+@media (max-width: 768px) {
+
+    /* ------------------------------------------------------
+       GLOBAL MOBILE OVERFLOW FIX
+       ------------------------------------------------------ */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+
+    /* ------------------------------------------------------
+       HEADER
+       ------------------------------------------------------ */
+
+    .site-header {
+        width: 100%;
+        padding: 24px 20px;
+    }
+
+    .header-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* ------------------------------------------------------
+       HERO SECTION
+       ------------------------------------------------------ */
+
+    .hero {
+        width: 100%;
+        max-width: 100%;
+        min-height: auto;
+
+        padding-top: 100px;
+        padding-bottom: 90px;
+
+        overflow: hidden;
+    }
+
+
+    /* ------------------------------------------------------
+       HERO CONTAINER
+       IMPORTANT:
+       Force the desktop two-column layout
+       into one mobile column.
+       ------------------------------------------------------ */
+
+    .hero-container {
+        width: 100%;
+        max-width: 100%;
+
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 0;
+
+        min-height: auto;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    /* ------------------------------------------------------
+       HERO TEXT AREA
+       ------------------------------------------------------ */
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+
+        min-width: 0;
+
+        overflow: hidden;
+    }
+
+
+    /* ------------------------------------------------------
+       AVAILABLE FOR NEW PROJECTS
+       ------------------------------------------------------ */
+
+    .availability {
+        max-width: 100%;
+
+        font-size: 11px;
+
+        letter-spacing: .08em;
+
+        white-space: normal;
+
+        margin-bottom: 35px;
+    }
+
+
+    /* ------------------------------------------------------
+       MAIN HERO TITLE
+       Fixes:
+       "EXPERIENCES" going outside the phone.
+       ------------------------------------------------------ */
+
+    .hero-title {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+
+        font-size:
+            clamp(
+                3.2rem,
+                14vw,
+                5.5rem
+            );
+
+        line-height: .86;
+
+        letter-spacing: -.065em;
+
+        margin: 0;
+
+        padding: 0;
+
+        overflow-wrap: normal;
+
+        word-break: normal;
+
+        white-space: normal;
+    }
+
+
+    /* ------------------------------------------------------
+       HERO TITLE WORDS
+       ------------------------------------------------------ */
+
+    .hero-title .solid,
+    .hero-title .outline {
+        display: block;
+
+        max-width: 100%;
+    }
+
+
+    /* ------------------------------------------------------
+       HERO DESCRIPTION
+       Fixes the text running outside the screen.
+       ------------------------------------------------------ */
+
+    .hero-description {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+
+        margin-top: 45px;
+
+        font-size: 17px;
+
+        line-height: 1.65;
+
+        overflow-wrap: break-word;
+
+        word-wrap: break-word;
+    }
+
+
+    .hero-description p {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 0;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* ------------------------------------------------------
+       VIEW WORK BUTTON
+       ------------------------------------------------------ */
+
+    .hero-actions {
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        margin-top: 35px;
+    }
+
+
+    .hero-button {
+
+        width: 105px;
+
+        height: 105px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* ------------------------------------------------------
+       PROFILE CARD WRAPPER
+       This is the important fix for screenshot #2.
+       ------------------------------------------------------ */
+
+    .hero-card-wrap {
+
+        position: relative !important;
+
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        margin: 65px auto 40px !important;
+
+        padding: 0 !important;
+
+        display: flex !important;
+
+        justify-content: center !important;
+
+        align-items: center !important;
+
+        overflow: visible;
+
+        z-index: 10;
+    }
+
+
+    /* ------------------------------------------------------
+       PROFILE CARD
+       ------------------------------------------------------ */
+
+    .hero-card {
+
+        position: relative !important;
+
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+
+        width:
+            min(
+                320px,
+                calc(100vw - 44px)
+            ) !important;
+
+        height:
+            min(
+                470px,
+                calc(100vw * 1.38)
+            ) !important;
+
+        max-width:
+            calc(100vw - 44px) !important;
+
+        margin: 0 auto !important;
+
+        flex-shrink: 0;
+
+        transform:
+            rotate(2deg) !important;
+
+        transform-origin: center center;
+
+        overflow: hidden;
+
+        border-radius:
+            90px 90px 30px 30px;
+
+        z-index: 20;
+    }
+
+
+    /* ------------------------------------------------------
+       PROFILE CARD LABEL
+       ------------------------------------------------------ */
+
+    .hero-card-top {
+
+        position: absolute;
+
+        top: 22px;
+
+        left: 15px;
+
+        right: 15px;
+
+        width: auto;
+
+        text-align: center;
+
+        white-space: nowrap;
+
+        font-size: 10px;
+
+        letter-spacing: .05em;
+
+        z-index: 30;
+    }
+
+
+    /* ------------------------------------------------------
+       PROFILE IMAGE
+       ------------------------------------------------------ */
+
+    .profile-image {
+
+        position: absolute;
+
+        top: 58px;
+
+        left: 14px;
+
+        width:
+            calc(100% - 28px);
+
+        height:
+            calc(100% - 145px);
+
+        border-radius:
+            28px;
+
+        overflow: hidden;
+    }
+
+
+    .profile-image img {
+
+        width: 100%;
+
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+
+        object-position: center;
+    }
+
+
+    /* ------------------------------------------------------
+       PROFILE CARD FOOTER
+       ------------------------------------------------------ */
+
+    .hero-card-footer {
+
+        position: absolute;
+
+        left: 24px;
+
+        right: 24px;
+
+        bottom: 22px;
+
+        display: flex;
+
+        align-items: flex-end;
+
+        justify-content: space-between;
+
+        z-index: 30;
+    }
+
+
+    .hero-card-footer .small-label {
+
+        font-size: 8px;
+
+        margin-bottom: 4px;
+    }
+
+
+    .hero-card-footer strong {
+
+        font-size: 15px;
+    }
+
+
+    /* GREEN CIRCLE */
+
+    .hero-card-arrow {
+
+        width: 40px;
+
+        height: 40px;
+
+        flex-shrink: 0;
+
+        border-radius: 50%;
+    }
+
+
+    /* ------------------------------------------------------
+       CODE WINDOW
+       Keep it behind the card and inside the screen.
+       ------------------------------------------------------ */
+
+    .code-window {
+
+        position: absolute;
+
+        width: 250px;
+
+        height: 160px;
+
+        right: -60px;
+
+        bottom: 20px;
+
+        opacity: .18;
+
+        z-index: 1;
+
+        pointer-events: none;
+
+        transform:
+            rotate(-5deg);
+    }
+
+
+    /* ------------------------------------------------------
+       DEVELOPER BACKGROUND
+       ------------------------------------------------------ */
+
+    .developer-background {
+
+        position: absolute;
+
+        inset: 0;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        overflow: hidden;
+
+        pointer-events: none;
+
+        z-index: 0;
+    }
+
+
+    /* ------------------------------------------------------
+       MARQUEE
+       ------------------------------------------------------ */
+
+    .marquee {
+
+        position: relative !important;
+
+        left: auto !important;
+
+        right: auto !important;
+
+        bottom: auto !important;
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        height: 62px;
+
+        margin-top: 30px !important;
+
+        overflow: hidden;
+
+        white-space: nowrap;
+
+        z-index: 30;
+    }
+
+
+    .marquee-track {
+
+        width: max-content;
+
+        display: flex;
+
+        align-items: center;
+
+        white-space: nowrap;
+
+        gap: 25px;
+
+        animation:
+            marquee
+            22s
+            linear
+            infinite;
+    }
+
+
+    .marquee-track span {
+
+        font-size: 11px;
+
+        white-space: nowrap;
+    }
+
+
+    .marquee-track i {
+
+        font-size: 18px;
+    }
+
+
+    /* ------------------------------------------------------
+       CONTACT SECTION
+       Fixes "SOMETHING GREAT." being cut off.
+       ------------------------------------------------------ */
+
+    .contact {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        overflow: hidden;
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+    }
+
+
+    .contact-title {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        font-size:
+            clamp(
+                3.2rem,
+                15vw,
+                6rem
+            );
+
+        line-height: .88;
+
+        letter-spacing: -.06em;
+
+        overflow-wrap: normal;
+
+        word-break: normal;
+
+        white-space: normal;
+    }
+
+
+    /* ------------------------------------------------------
+       CONTACT EMAIL
+       ------------------------------------------------------ */
+
+    .contact-email {
+
+        max-width: 100%;
+
+        width: 100%;
+
+        font-size:
+            clamp(
+                1.4rem,
+                6vw,
+                2.5rem
+            );
+
+        overflow-wrap: anywhere;
+
+        word-break: break-word;
+    }
+
+
+    /* ------------------------------------------------------
+       CONTACT SOCIAL ICONS
+       ------------------------------------------------------ */
+
+    .social-links {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+
+    .social-link {
+
+        width: 76px;
+
+        height: 76px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* ------------------------------------------------------
+       ALL SECTIONS
+       Prevent accidental horizontal overflow.
+       ------------------------------------------------------ */
+
+    section {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        overflow-x: hidden;
+    }
+
+
+    /* ------------------------------------------------------
+       IMAGES
+       ------------------------------------------------------ */
+
+    img {
+
+        max-width: 100%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL PHONES
+   360px and below
+========================================================== */
+
+@media (max-width: 400px) {
+
+
+    .hero {
+
+        padding-top: 80px;
+
+    }
+
+
+    .hero-container {
+
+        padding-left: 16px;
+
+        padding-right: 16px;
+
+    }
+
+
+    .hero-title {
+
+        font-size:
+            clamp(
+                2.9rem,
+                13.5vw,
+                4.8rem
+            );
+
+        line-height: .88;
+
+        letter-spacing: -.06em;
+    }
+
+
+    .hero-description {
+
+        font-size: 16px;
+
+        line-height: 1.55;
+
+    }
+
+
+    .hero-card {
+
+        width:
+            calc(100vw - 34px) !important;
+
+        max-width:
+            calc(100vw - 34px) !important;
+
+        height:
+            440px !important;
+
+        border-radius:
+            80px 80px 28px 28px;
+    }
+
+
+    .profile-image {
+
+        top: 55px;
+
+        left: 12px;
+
+        width:
+            calc(100% - 24px);
+
+        height:
+            calc(100% - 135px);
+
+        border-radius: 25px;
+    }
+
+
+    .hero-card-footer {
+
+        left: 20px;
+
+        right: 20px;
+
+        bottom: 18px;
+    }
+
+
+    .hero-card-arrow {
+
+        width: 38px;
+
+        height: 38px;
+    }
+
+
+    .contact-title {
+
+        font-size:
+            clamp(
+                2.9rem,
+                14vw,
+                4.5rem
+            );
+    }
+
+
+    .contact-email {
+
+        font-size: 1.35rem;
+
+    }
+
+}
 }
